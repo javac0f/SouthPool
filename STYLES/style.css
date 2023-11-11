@@ -29,6 +29,12 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
 }
 
+h1 strong {
+  color: yellow;
+  font-weight: inherit;
+}
+
+
 /*
 ======= BODY =======
 In order to help distinguish the content from the background, and to help the different columns, sections to pop-out, use a slightly grey background for the whole app.
