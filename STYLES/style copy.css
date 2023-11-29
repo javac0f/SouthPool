@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('Baloo-Regular.ttf');
+  }
+
+
+/*GLOBAL PROPERTIES*/
+:root{
+    --background-color: #06273A;
+    --font-family: 'Baloo';
+
+}
+
+body,
+.MuiTypography-root,
+.MuiBox-root,
+.MuiButtonBase-root,
+.MuiInputLabel-root,
+.MuiInputBase-root {
+
+    font-family: var(--font-family);
+    font-weight: 100;
+
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Baloo";
+  font-weight: 500;
+}
+
+h1 strong {
+  color: yellow;
+  font-weight: inherit;
+}
+
+
+/*
+======= BODY =======
+In order to help distinguish the content from the background, and to help the different columns, sections to pop-out, use a slightly grey background for the whole app.
+To fit the usual Taipy theme, indigo tones are preferred. (ie : #283282)
+*/
+
+
+body,
+#root,
+#root > .MuiBox-root,
+#root > .MuiBox-root > .MuiBox-root {
+  max-width: 100%;
+  background-color: var(--background-color) !important;
+}
+
+
+#root {
+    /* Using padding instead of margin to space the whole content*/
+    margin: 0;
+    padding: 1%;
+}
+
+
+/* Layout grids */
+.taipy-layout {
+    margin-top: 1rem; /* Add vertical spacing before layouts */
+    gap: 1rem; /* Widen the gap to 1rem minimum */
+    align-items: center; /* Verticaly center columns content that are on the same line */
+  }
+  
+  /* Prevent columns to grow wider than their container */
+  .taipy-layout > * {
+    min-width: 0;
+  }
+  
+  /* Augment vertical spacing for h1 headings immediatly adjacent to a layout */
+  .taipy-layout + h1 {
+    margin-top: 4rem;
+  }
+  
+  /* Encapsulate section elements into "cards" */
+  .taipy-chart,
+  .card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  /*
+  ======= CONTROLS =======
+  */
+  
+  /* Remove unwanted margins around select */
+  .taipy-selector {
+    margin: 0;
+  }
+  
+  /* Form control */
+  .MuiFormControl-root {
+    /* Prefer keeping the width to a native 100% and setting a max-width instead for responsive purpose */
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  /* Focused form control styles */
+  .MuiInputLabel-root.Mui-focused {
+    color: var(--background-color);
+  }
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--background-color);
+  }
+  
+  /* Chart */
+  .taipy-chart .svg-container {
+    max-width: 100%;
+  }
+  .taipy-chart svg {
+    max-width: 100%;
+  }
+  
+  /* Toggle */
+  .MuiButtonBase-root {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+  }
+  .MuiButtonBase-root .MuiTypography-root {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  .MuiToggleButton-root.Mui-selected,
+  .MuiToggleButton-root.Mui-selected:hover {
+    background-color: var(--background-color);
+    color: #fff;
+  }
+  

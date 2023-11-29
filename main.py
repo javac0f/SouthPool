@@ -8,7 +8,9 @@ import pages
 
 page_dict = {
     '/': pages.root_page,
-    'home':pages.home_page
+    'home':pages.home_page,
+    'order':pages.order_page,
+    'trends':pages.trends_page
 }
 
 

@@ -2,26 +2,30 @@ import taipy as tp
 
 
 home_page = """
-<center>\n<|navbar|>\n</center>
-# <strong>SOUTH</strong>POOL
+"""
+
+order_page = """
 
 
+"""
 
-<|25 75|layout|gap=30px|
+trends_page = """
 
-<|sidebar|
-## Please **filter** here:
-<||selector||multiple|label=Select the City|dropdown||class_name=fullwidth|>
-<||selector||multiple|label=Select the Customer Type|dropdown||class_name=fullwidth|>
-<||selector||multiple|label=Select the Gender|dropdown||class_name=fullwidth|>
-|>
-
-
-
-|>
 
 """
 
 
+
+
 root_page = """
+<|10 90|layout|gap=30px|
+
+
+# <strong>SOUTH</strong>POOL
+
+<center><|navbar|></center>
+
+
+
+|>
 """
